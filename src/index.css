@@ -1,0 +1,161 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --whiteBG: rgb(247, 245, 250);
+  --light-green: rgb(172, 198, 201);
+  --light-grey: #f1f1f4;
+  --text-color-light: #f1f1f1;
+  --text-color-dark: #333;
+  --text-color-danger: rgb(152, 58, 58);
+  --white: #f1f1f1;
+}
+body{
+  margin: 0 auto;
+  background-color: #e2e1da;
+
+}
+
+
+
+.logo{
+  width: 150px;
+}
+
+/* ---------- nav styling ---------- */
+nav {
+  background-color: var(--whiteBG);
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  align-items: center;
+  width: 100%;
+}
+
+
+/* Style the links inside the navigation bar */
+nav a {
+  display: inline-block;
+  color: var(--text-color-dark);
+  text-align: center;
+  padding: 20px 16px;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* Change the color of links on hover */
+nav a:hover {
+  background-color: var(--light-grey);
+  color: var(--text-color-dark);
+}
+
+/* Add a color to the active/current link */
+nav a.active {
+  background-color: var(--light-green);
+  color: var(--green);
+}
+
+/* ---------- grid container styling ---------- */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1em;
+}
+.videoSectionOne {
+  display: flex;
+  justify-content: center;
+  gap: 10px
+  ;
+}
+.videoSectionTextWrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  width: 40%;
+  line-height: 1.8rem;
+  gap: 10px;
+}
+p {
+  font-size: 1.3rem;
+}
+.videoClass {
+  margin: 20px 0px;
+}
+.textWrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 80%;
+  margin: 20px auto;
+  gap: 20px;
+
+}
+
+
+.imageSection {
+  --childs: 5;
+  --gap: 10px;
+  background: rgb(0, 0, 0);
+  border: 5px solid;
+  width: min(80%, 800px);
+  display: flex;
+  width: 100%;
+  gap: var(--gap);
+  
+}
+.imageWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 30px auto;
+}
+
+.box {
+  width: calc((100% / var(--childs)));
+  box-sizing: border-box;
+  height: min(30vmin, 250px);
+  background-color: white;
+  cursor: pointer;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  transition: width 300ms 50ms ease-in-out;
+}
+
+.box:hover {
+  width: calc((100% / (var(--childs) - 2)));
+}
+
+.imageSection:has(.box:hover) .box:not(:hover) {
+  width: calc((100% / (var(--childs) + 1)));
+}
+
+.box-1 {
+  background-image: url(./src/assets/picture1.jpg);
+}
+
+.box-2 {
+  background-image: url(./src/assets/picture2.jpg);
+
+}
+
+.box-3 {
+  background-image: url(./src/assets/picture3.jpg);
+}
+
+.box-4 {
+  background-image: url(./src/assets/picture4.jpg);
+}
+
+.box-5 {
+  background-image: url(./src/assets/picture5.jpg);
+}
+
