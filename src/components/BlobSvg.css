@@ -1,0 +1,18 @@
+@keyframes blob-animation {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  /* Rest of your CSS styles */
+  .blob-mask {
+    animation: blob-animation 5s infinite alternate ease-in-out;
+  }
+
+  

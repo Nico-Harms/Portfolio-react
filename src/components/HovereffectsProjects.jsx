@@ -50,8 +50,8 @@ export default function HovereffectProjects() {
       <ul className="portfolio">
         <div className="project-label">
           <div className="label-mask-wrap">
-            <h6 className="portfolio-mask"><span>OUR PROJECTS</span></h6>
-            <h6 className="masked">OUR PROJECTS</h6>
+            <h6 className="portfolio-mask"><span>MY PROJECTS</span></h6>
+            <h6 className="masked">MY PROJECTS</h6>
           </div>
         </div>
         <li

@@ -9,8 +9,8 @@ export default function Navigation() {
   };
 
   return (
-    <header className="header">
-      <div><img src="" alt="" /></div>
+    <header className="headerWrapper">
+     <h2>Harmscreativity</h2>
     <nav className={`navlinks ${isMenuOpen ? "active" : ""}`}>
       <div className="burger-menu" onClick={toggleMenu}>
         <div className={`menu__icon ${isMenuOpen ? "active" : ""}`}>
