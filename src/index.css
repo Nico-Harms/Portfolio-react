@@ -88,8 +88,8 @@ button {
 /* Styling of main content on landing page */ 
 
 .mainWrapper {
-    background: rgb(255,255,255);
-background: linear-gradient(180deg, rgba(255,255,255,1) 4%, rgba(211,187,167,1) 40%, rgba(136,70,16,1) 77%);
+    background: rgb(150,112,91);
+background: linear-gradient(180deg, rgba(150,112,91,1) 7%, rgba(171,128,96,1) 59%);
 height: 100vh; 
 }
 
@@ -98,17 +98,23 @@ height: 100vh;
     height: 100px;
 }
 
+.secondProfilePicture {
+    height: 100%;
+    width: 400px;
+    object-fit: contain;
+}
+
 .techStack {
     font-size: 2rem;
     height: 50px;
     width: 50%;
-    border: 1px solid black;
     padding: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 30px;
     margin: 40px auto;
+    color: white;
 }
 .techHeader {
     display: flex;
@@ -125,7 +131,7 @@ height: 100vh;
     height: 100%;
     margin: 0;
     padding: 0;
-    border: 1px solid rgb(36, 35, 35);
+    border: 1px solid rgb(255, 255, 255);
 }
 
 .textToPictureWrapper {
@@ -147,6 +153,7 @@ height: 100vh;
 .textWrapperMain h3 {
     font-size: 2.5rem;
     width: 80%;
+    color: white;
     
 }
 
@@ -158,7 +165,7 @@ height: 100vh;
     
     @supports (-webkit-text-stroke: 4px white) {
         color: transparent;
-        -webkit-text-stroke: 2px rgb(37, 32, 32);
+        -webkit-text-stroke: 2px rgb(255, 255, 255);
     }
     padding: 0;
     margin: 0;
@@ -192,7 +199,23 @@ height: 100vh;
     text-decoration: none;
 }
 
+/* About Me styles */
 
+.aboutMe {
+    display: flex;
+    width: 100%;
+    height: 60vh;
+    background-color: black;
+}
+
+.aboutMeText {
+    color: white;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5% 10%;
+}
 
 
 /* Style end Main page */ 
@@ -277,9 +300,8 @@ ul li {
     overflow: hidden;
     width: 76%;
     padding: 12% 12%;
-    margin: 0;
     height: 100%;
-    position: relative
+    position: relative;
 }
 
 .portfolio-wrapper li {
@@ -300,7 +322,7 @@ ul li {
     left: 50%;
     right: 0;
     bottom: 0;
-    background-color: #884610;
+    background-color: #ab8060;
     z-index: -1
 }
 
@@ -326,7 +348,7 @@ ul li {
     width: 100%;
     overflow: hidden;
     line-height: 1.25em;
-    color: rgba(37, 48, 105, 0.15);
+    color: #A1795D;
     font-weight: 800
 }
 
@@ -430,7 +452,7 @@ ul li {
 
 
 .portfolio-wrapper li {
-    height: 220px;
+    height: 150px;
     font-size: 6.666em
 }
 
