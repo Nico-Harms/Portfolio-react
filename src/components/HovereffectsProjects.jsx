@@ -47,6 +47,10 @@ export default function HovereffectProjects() {
 
   return (
     <div className="portfolio-wrapper">
+      <img className='portfolioPictures ' src="src\assets\capo.webp" alt="" />
+      <img className='portfolioPictures' src="src\assets\webdoc.PNG" alt="" />
+      <img className='portfoliopictures' src="" alt="" />
+
       <ul className="portfolio">
         <div className="project-label">
           <div className="label-mask-wrap">
@@ -63,6 +67,7 @@ export default function HovereffectProjects() {
           <div className="portfolio-mask-wrap">
             <a href="#">
               <div className="portfolio-mask"><span>capo</span></div>
+              <img className='portfolio' src="src\assets\capo-mad-og-vinbar.webp" alt="" />
               <span
                 className="fake-link"
                 data-mask-link="capo"
@@ -109,6 +114,9 @@ export default function HovereffectProjects() {
           </div>
         </li>
       </ul>
+      /
+  
+
     </div>
   );
 }
