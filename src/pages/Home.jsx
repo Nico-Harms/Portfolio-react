@@ -9,7 +9,8 @@ import ChaningText from '../components/ChaningText.jsx';
 export default function Home() {
   return (
     <div className='siteWrapper'>
-      <main className='mainWrapper'>
+  
+  <main className="mainWrapper">
       <div className='textToPictureWrapper'>
   <div className='textWrapperMain'>
   <div className='headerContainer'>
@@ -41,7 +42,10 @@ export default function Home() {
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam dignissimos et quia quis est sed nihil quas, ea deleniti enim dolorum ab libero, maxime placeat porro autem, iusto saepe sequi?</p>
         </div>
         </div>
+        
       </main>
+   
+
       <HovereffectProjects />
       {/* More content */}
     </div>

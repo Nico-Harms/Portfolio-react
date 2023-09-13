@@ -1,8 +1,14 @@
 .randomTextWrapper {
     letter-spacing: 1px;
     color: white;
+    margin-bottom: 5%;
   }
-  
+
+ .randomTextWrapper h2 {
+  margin-bottom: 0;
+ }
+
+
   .random-word {
     display: inline-block;
     text-transform: uppercase;
@@ -37,4 +43,6 @@
       opacity: 100;
     }
   }
+
+  
   

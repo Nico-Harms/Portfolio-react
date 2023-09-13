@@ -60,8 +60,9 @@ class ChaningText extends Component {
     return (
         <div className='randomTextWrapper'>
         <h2>
-          Jeg vil gerne være din nye <span className='random-word'>{phrases[currentIndex]}</span>
+          Jeg vil gerne være din nye 
         </h2>
+        <span className='random-word'>{phrases[currentIndex]}</span>
         </div>
     );
   }

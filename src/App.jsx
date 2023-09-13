@@ -9,7 +9,9 @@ import Contact from "./pages/Contact";
 
 export default function App() {
   return (
-   <main>
+   
+     <main>
+     
       <Navigation />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -17,6 +19,9 @@ export default function App() {
         <Route path="/projects" element={<Projects />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
+     
       </main>
+    
+      
   );
 }
