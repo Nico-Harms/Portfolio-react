@@ -293,14 +293,13 @@ ul li {
     list-style-type: none
 }
 
-
-
-.portfolioPictures {
+.projectPicture {
     display: none;
-  }
+}
+
   
   /* Override display for active images */
-  .portfolioPictures.active {  
+ .projectPicture.entered {  
     display: block;
     position: absolute;
     width: 100%;
@@ -310,6 +309,7 @@ ul li {
     margin: 0;
     padding: 0;
     left: 0;
+    z-index: 100;
   }
   
 
@@ -350,7 +350,15 @@ ul li {
 }
 
 .portfolio-wrapper.selected:before {
-    left: 0
+    left: 0;
+    /* 
+    Har fylder billedet den mængde som det skal 
+    background-image: url(src/assets/capo.webp);
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    height: 100%;
+    width: 100%;
+    */ 
 }
 
 .portfolio-wrapper .fake-link:before {
@@ -434,7 +442,7 @@ ul li {
     -moz-transform: translateX(0%);
     -webkit-transform: translateX(0%);
     -o-transform: translateX(0%);
-    -ms-transform: translateX(0%)
+    -ms-transform: translateX(0%);
 }
 
 .portfolio-wrapper .portfolio.entered .project-label .portfolio-mask>span {
@@ -490,3 +498,61 @@ ul li {
 }
 
 
+/* Contact Me styles */
+.contactMeWrapper {
+    display: flex;
+    align-items: center;
+    background-color: #D29E69;
+    gap: 30px;
+}
+.contactMeHeader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20vh;
+    background-color: #2B2B2B;
+    width: 100%;
+    color: white;
+    text-align: center;
+    font-size: 4rem;
+    margin: 0;
+}
+
+.contactMeText h3 {
+    text-align: center;
+    width: 100%;
+    font-size: 2rem;
+    margin: 0 auto;
+    width: 80%;
+}
+
+.contactMeBoxes {
+display: flex;
+align-items: center;
+border-radius: 0px 40px 40px 0px;
+background: #FFF;
+width: 60%;
+font-size: 2rem;
+padding-left: 20px;
+gap: 20px;
+}
+
+
+.contactMeText {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 100%;
+    width: 50%;
+    gap: 30px;
+    
+
+}
+.contactMeImage {
+    width: 50%;
+}
+
+
+
+/* End of Contact Me styles */

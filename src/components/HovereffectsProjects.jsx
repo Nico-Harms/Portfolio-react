@@ -13,7 +13,7 @@ export default function HovereffectProjects() {
     const portfolioItems = document.querySelectorAll('.portfolio-item');
     const portfolioWrapper = document.querySelector('.portfolio-wrapper');
     const portfolioList = document.querySelector('.portfolio');
-
+    const projectPicture = document.querySelector('.projectPicture');
     const hasActivePortfolio = Array.from(portfolioItems).some((item) =>
       item.classList.contains('active')
     );
@@ -21,9 +21,12 @@ export default function HovereffectProjects() {
     if (hasActivePortfolio) {
       portfolioWrapper.classList.add('selected');
       portfolioList.classList.add('entered');
+      projectPicture.classList.add('entered');
     } else {
       portfolioWrapper.classList.remove('selected');
       portfolioList.classList.remove('entered');
+      projectPicture.classList.remove('entered');
+      
     }
   }
 
@@ -47,9 +50,7 @@ export default function HovereffectProjects() {
 
   return (
     <div className="portfolio-wrapper">
-      <img className='portfolioPictures ' src="src\assets\capo.webp" alt="" />
-      <img className='portfolioPictures' src="src\assets\webdoc.PNG" alt="" />
-      <img className='portfoliopictures' src="" alt="" />
+ 
 
       <ul className="portfolio">
         <div className="project-label">
@@ -67,7 +68,6 @@ export default function HovereffectProjects() {
           <div className="portfolio-mask-wrap">
             <a href="#">
               <div className="portfolio-mask"><span>capo</span></div>
-              <img className='portfolio' src="src\assets\capo-mad-og-vinbar.webp" alt="" />
               <span
                 className="fake-link"
                 data-mask-link="capo"
@@ -75,6 +75,8 @@ export default function HovereffectProjects() {
                 onMouseLeave={handleTextHoverEnd}
               ></span>
             </a>
+            <img  className={`projectPicture ${isPortfolioActive ? 'active' : ''}`} src="src\assets\capo.webp" alt="" />
+
           </div>
         </li>
         <li
@@ -93,10 +95,12 @@ export default function HovereffectProjects() {
                 onMouseLeave={handleTextHoverEnd}
               ></span>
             </a>
+            <img  className={`projectPicture ${isPortfolioActive ? 'active' : ''}`} src="src\assets\webdoc.PNG" alt="" />
+
           </div>
         </li>
         <li
-          className={`portfolio-item ${isPortfolioActive ? 'active' : ''}`}
+          className="portfolio-item"
           data-portfolio-service="digital & brand"
           onMouseEnter={handlePortfolioHover}
           onMouseLeave={handlePortfolioHover}

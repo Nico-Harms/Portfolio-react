@@ -1,7 +1,10 @@
 import React from 'react';
 import HovereffectProjects from '../components/HovereffectsProjects.jsx';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHtml5, faSquareJs, faReact, faCss3Alt, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faHtml5, faSquareJs, faReact, faCss3Alt, faGithub, faLinkedin} from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons'
+
+
 import BlobSvg from '../components/BlobSvg.jsx';
 import ChaningText from '../components/ChaningText.jsx';
 
@@ -33,6 +36,7 @@ export default function Home() {
           <FontAwesomeIcon className='techStackIcon' color="#2965f1" icon={faCss3Alt} />
           <FontAwesomeIcon className='techStackIcon' color="#f0db4f" icon={faSquareJs} />
           <FontAwesomeIcon className='techStackIcon' color="#61DBFB" icon={faReact} />
+          
           <hr className='techHr' />
         </div>
         <div className='aboutMe'>
@@ -47,7 +51,28 @@ export default function Home() {
    
 
       <HovereffectProjects />
-      {/* More content */}
+      <div>
+      <h2 className='contactMeHeader'>Contact me</h2>
+        <section className='contactMeWrapper'>
+          <article className='contactMeText'>
+          <h3>If you have any questions, or want to work with me, do not hesitate to contact me.</h3>
+            <div className='contactMeBoxes'>
+            <a href="#"><FontAwesomeIcon color='black' icon={faPhone} /></a>
+              <p>+45 61 72 03 11</p>
+            </div>
+            <div className='contactMeBoxes'>
+            <a href="#"><FontAwesomeIcon color='black' icon={faEnvelope} /></a>
+
+              <p>Nicolai.harms@gmail.com</p>
+            </div>
+            <div className='contactMeBoxes'>
+              <a href="#"><FontAwesomeIcon color='black' icon={faLinkedin} /></a>
+              <p>Nicolai Harms</p>
+            </div>
+          </article>
+          <img className='contactMeImage' src="src\assets\capo.webp" alt="" />
+        </section>
+      </div>
     </div>
   );
 }
