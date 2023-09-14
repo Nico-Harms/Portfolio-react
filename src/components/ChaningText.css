@@ -1,11 +1,18 @@
 .randomTextWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     letter-spacing: 1px;
     color: white;
     margin-bottom: 5%;
+    text-align: center;
+    width: 100%;
   }
 
  .randomTextWrapper h2 {
-  margin-bottom: 0;
+  font-size: 3.5rem;
+  width: 50%;
  }
 
 
@@ -13,11 +20,12 @@
     display: inline-block;
     text-transform: uppercase;
     color: #bbaadd;
-    letter-spacing: 3px;
-    width: auto;
     animation: slidedown 4s infinite;
     -webkit-animation: slidedown 4s infinite;
     -moz-animation: slidedown 4s infinite;
+    font-size: 3rem;
+    width: 300px;
+    white-space: nowrap;
   }
   
   @keyframes slidedown {

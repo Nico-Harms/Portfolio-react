@@ -3,6 +3,9 @@ import HovereffectProjects from '../components/HovereffectsProjects.jsx';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHtml5, faSquareJs, faReact, faCss3Alt, faGithub, faLinkedin} from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons'
+import aboutMePicture from '../assets/aboutmepicture.png';
+import contactpicture from '../assets/contactmepicture.webp';
+
 
 
 import BlobSvg from '../components/BlobSvg.jsx';
@@ -21,8 +24,8 @@ export default function Home() {
    
       <h3>Front-End Developer med passion for inaktive løsninger og design</h3>
       <div className='soMe'>
-        <a href="#"><FontAwesomeIcon color='white' icon={faGithub} /></a>
-        <a href="#"><FontAwesomeIcon color='white' icon={faLinkedin} /></a>
+        <a className='github' href="#"><FontAwesomeIcon  icon={faGithub} /></a>
+        <a className='linkedin' href="#"><FontAwesomeIcon icon={faLinkedin} /></a>
       </div>
     </div>
   </div>
@@ -39,38 +42,42 @@ export default function Home() {
           
           <hr className='techHr' />
         </div>
-        <div className='aboutMe'>
-       <img className='secondProfilePicture' src="src\assets\placeholderprofile.jpg" alt="" />
-        <div className="aboutMeText">
         <ChaningText />
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam dignissimos et quia quis est sed nihil quas, ea deleniti enim dolorum ab libero, maxime placeat porro autem, iusto saepe sequi?</p>
-        </div>
-        </div>
+  <div className='aboutMeWrapper' style={{ backgroundImage: `url(${aboutMePicture})` }}>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam dignissimos et quia quis est sed nihil quas, ea deleniti enim dolorum ab libero, maxime placeat porro autem, iusto saepe sequi?
+  </p>
+    {/* You can add any additional styling here */}
+  </div>
+  
+
+
         
       </main>
    
 
       <HovereffectProjects />
       <div>
-      <h2 className='contactMeHeader'>Contact me</h2>
+      
         <section className='contactMeWrapper'>
           <article className='contactMeText'>
+            <h2>Contact me</h2>
           <h3>If you have any questions, or want to work with me, do not hesitate to contact me.</h3>
             <div className='contactMeBoxes'>
-            <a href="#"><FontAwesomeIcon color='black' icon={faPhone} /></a>
+            <a href="#"><FontAwesomeIcon  icon={faPhone} /></a>
               <p>+45 61 72 03 11</p>
             </div>
             <div className='contactMeBoxes'>
-            <a href="#"><FontAwesomeIcon color='black' icon={faEnvelope} /></a>
+            <a href="#"><FontAwesomeIcon icon={faEnvelope} /></a>
 
               <p>Nicolai.harms@gmail.com</p>
             </div>
             <div className='contactMeBoxes'>
-              <a href="#"><FontAwesomeIcon color='black' icon={faLinkedin} /></a>
+              <a href="#"><FontAwesomeIcon icon={faLinkedin} /></a>
               <p>Nicolai Harms</p>
             </div>
           </article>
-          <img className='contactMeImage' src="src\assets\capo.webp" alt="" />
+          <img className='contactMeImage' src={contactpicture} alt="" width="100%" height="100%" />
         </section>
       </div>
     </div>

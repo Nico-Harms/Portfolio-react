@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
+import logo from '../assets/nhlogo.webp';
+
 
 export default function Navigation() {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -10,7 +12,7 @@ export default function Navigation() {
 
   return (
     <header className="headerWrapper">
-     <h2>Harmscreativity</h2>
+     <img className="logo" src={logo} alt="" />
     <nav className={`navlinks ${isMenuOpen ? "active" : ""}`}>
       <div className="burger-menu" onClick={toggleMenu}>
         <div className={`menu__icon ${isMenuOpen ? "active" : ""}`}>
