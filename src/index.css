@@ -1,3 +1,6 @@
+
+
+
 body {
     padding: 0;
     margin: 0;
@@ -18,6 +21,7 @@ body {
     height: 10vh;
     position: fixed;
     width: 100%;
+    z-index: 900;
   
 }
 
@@ -26,82 +30,114 @@ body {
     object-fit: contain;
 }
 /* burger menu */ 
-button {
-  border: none;
-  background: none;
-  padding: 0;
-  margin: 0;
-  cursor: pointer;
-  font-family: inherit;
-}
 
 
-.menu__icon {
-  width: 32px;
-  height: 32px;
-  padding: 4px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  transition: transform 0.4s;
-  cursor: pointer; 
-}
-
-.menu__icon span {
-  width: 100%;
-  height: 0.25rem;
-  border-radius: 0.125rem;
-  background-color: rgb(255, 255, 255);
-  box-shadow: 0 0.5px 2px 0 hsla(0, 0%, 0%, 0.2);
-  transition: width 0.4s, transform 0.4s, background-color 0.4s;
-}
-
-.menu__icon :nth-child(1) {
-  width: 75%;
-}
-
-.menu__icon :nth-child(2) {
-  width: 50%;
-}
 
 
-.menu__icon.active {
-  transform: rotate(-90deg);
-}
+/*Burger-menu styling and active - nonactive classes */
 
-.menu__icon.active span {
-  width: 0.25rem;
-  transform: translateX(10px);
-  background-color: rgba(247, 14, 2, 0.192);
-}
+.hamburger {
+    cursor: pointer;  }
 
-/* Style for menu links */
-
-.menu-links {
-  display: none;
-}
-
-.navlinks.active .menu-links {
+ 
   
-  display: flex;
-  flex-direction: column;
-  font-size: 2rem;
-  background-color: grey;
+  .hamburger input {
+    display: none;
+  }
   
-}
+  .hamburger svg {
+    /* The size of the SVG defines the overall size */
+    height: 3em;
+    /* Define the transition for transforming the SVG */
+    transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .line {
+    fill: none;
+    stroke: white;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 3;
+    /* Define the transition for transforming the Stroke */
+    transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+      stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .line-top-bottom {
+    stroke-dasharray: 12 63;
+  }
+  
+  .hamburger input:checked+svg {
+    transform: rotate(-45deg);
+  }
+  
+  .hamburger input:checked+svg .line-top-bottom {
+    stroke-dasharray: 20 300;
+    stroke-dashoffset: -32.42;
+  }
+  
+  .nav-menu {
+  
+    position: fixed;
+    right: -100%;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    transition: 0.3s;
+    background: rgba(32, 32, 32, 0.5);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    z-index: -10;
+
+    
+  }
+  .nav-menu ul {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+  }
+  .nav-item{
+    text-align: center;
+    font-size: 5rem;
+    color: white;
+  }
+  .nav-item a {
+    color: white;
+
+  }
+
+  
+  .nav-menu.active {
+    right: 0;
+
+  }
+
+  .nav-item {
+    position: relative;
+    display: inline-block; /* Ensures the underline only covers the link's text */
+    padding-bottom: 5px; /* Adjust this value to control the underline's thickness */
+    transition: border-bottom 0.3s ease; /* Smooth transition for the underline */
+  }
+  
+  .nav-item:hover {
+    border-bottom: 2px solid #ffc506; /* Change the color and thickness as needed */
+  }
+  
+  
+  /*END OF BURGER-MENU STYLING */
+
+
+
+
 
 /* end of burgermenu */ 
 
-
-
-.navlinks {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 60px;
-  height: 100%;
-right: 0;
-}
 
 /* Styling of main content on landing page */ 
 
@@ -620,3 +656,4 @@ position: relative;
 }
 
 /* End of  Footer */
+
