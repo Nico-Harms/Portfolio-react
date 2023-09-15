@@ -13,9 +13,11 @@ body {
     display: flex;
     justify-content:space-between;
     align-items: center;
-    background: #96705b;
+    background-color: transparent;
     color: white;
-    height: 15vh;
+    height: 10vh;
+    position: fixed;
+    width: 100%;
   
 }
 
@@ -98,6 +100,7 @@ button {
   justify-content: center;
   padding: 60px;
   height: 100%;
+right: 0;
 }
 
 /* Styling of main content on landing page */ 
@@ -150,6 +153,8 @@ button {
     justify-content: center;
     width: 100%;
     gap: 20px;
+    position: relative;
+    top: 30%;
     
 }
 .textWrapperMain {
