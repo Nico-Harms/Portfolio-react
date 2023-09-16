@@ -22,7 +22,6 @@ body {
     position: fixed;
     width: 100%;
     z-index: 900;
-  
 }
 
 .logo {
@@ -51,7 +50,7 @@ body {
     /* Define the transition for transforming the SVG */
     transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
   }
-  
+
   .line {
     fill: none;
     stroke: white;
@@ -65,6 +64,10 @@ body {
   
   .line-top-bottom {
     stroke-dasharray: 12 63;
+  }
+
+  .hamburger-label {
+    margin: 0 30px;
   }
   
   .hamburger input:checked+svg {
@@ -188,7 +191,7 @@ body {
     align-items: center;
     justify-content: center;
     width: 100%;
-    gap: 20px;
+    gap: 50px;
     position: relative;
     top: 30%;
     
@@ -203,7 +206,6 @@ body {
 
 .textWrapperMain h3 {
     font-size: 2.5rem;
-    width: 80%;
     color: white;
     
 }
@@ -225,6 +227,7 @@ body {
     display: flex;
     flex-direction: column;
     left: 20%;
+    gap: 20px;
 
   }
 
@@ -562,15 +565,16 @@ ul li {
 }
 
 
-
-.contactMeText h2,h3 {
-    text-align: center;
-    font-size: 2.7rem;
-    margin: 0 auto;
-    width: 80%;
-    color: white;
-
+.contactMeText h2,
+.contactMeText h3 {
+  text-align: center;
+  font-size: 2.7rem;
+  margin: 0 auto;
+  width: 80%;
+  color: white;
 }
+
+
 .contactMeText h2 {
     font-size: 7rem;
     margin-top: 20px;
