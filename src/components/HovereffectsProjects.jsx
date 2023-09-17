@@ -107,10 +107,10 @@ export default function HovereffectProjects() {
         >
           <div className="portfolio-mask-wrap">
             <a href="#">
-              <div className="portfolio-mask"><span>aarhusvinhandel</span></div>
+              <div className="portfolio-mask"><span>vinhandel</span></div>
               <span
                 className="fake-link"
-                data-mask-link="aarhusvinhandel"
+                data-mask-link="vinhandel"
                 onMouseEnter={handleTextHover}
                 onMouseLeave={handleTextHoverEnd}
               ></span>

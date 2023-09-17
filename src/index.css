@@ -157,9 +157,9 @@ body {
 
 
 .techStack {
-    font-size: 2rem;
+  font-size: clamp(0.5rem, -0.0488rem + 2.4390vw, 3rem);    
     height: 50px;
-    width: 50%;
+    width: 100%;
     padding: 15px;
     display: flex;
     align-items: center;
@@ -168,6 +168,7 @@ body {
     margin: 40px auto;
     color: white;
 }
+
 .techHeader {
     display: flex;
     align-items: center;
@@ -176,8 +177,8 @@ body {
 }
 
 .techStackIcon {
-    font-size: 4rem;
-    padding: 30px;
+  font-size: clamp(1rem, 2.5rem + 1.9512vw, 4.5rem);
+      padding: 30px;
 }
 .techHr {
     height: 100%;
@@ -205,14 +206,13 @@ body {
 
 
 .textWrapperMain h3 {
-    font-size: 2.5rem;
-    color: white;
-    
+  font-size: clamp(1rem, 0.6610rem + 1.9512vw, 3rem);
+   color: white;
 }
 
 .textWrapperMain h2 {
-    font-size: 4.5rem;
-    color: rgb(255, 255, 255);
+  font-size: clamp(2rem, 2rem + 2.9268vw, 5rem);
+     color: rgb(255, 255, 255);
     
     @supports (-webkit-text-stroke: 4px white) {
         color: transparent;
@@ -282,21 +282,21 @@ body {
 
 /* YourComponent.module.css */
 .aboutMeWrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-size: cover;
-    background-repeat:no-repeat;
-    background-position: center;
-    height: 60vh;
-  }
-  .aboutMeWrapper p {
-    text-align: center;
-    font-size: 2.4rem;
-    color: rgb(255, 255, 255);
-    width: 80%;
-    
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: clamp(30vh, 60vh, 100vh); /* Adjust the values as needed */
+}
+
+.aboutMeWrapper p {
+  text-align: center;
+  font-size: 2.4rem;
+  color: rgb(255, 255, 255);
+  width: 80%;
+}
 
 
 
@@ -405,14 +405,7 @@ ul li {
 
 .portfolio-wrapper.selected:before {
     left: 0;
-    /* 
-    Har fylder billedet den mængde som det skal 
-    background-image: url(src/assets/capo.webp);
-    background-size: cover; 
-    background-repeat: no-repeat; 
-    height: 100%;
-    width: 100%;
-    */ 
+    
 }
 
 .portfolio-wrapper .fake-link:before {
