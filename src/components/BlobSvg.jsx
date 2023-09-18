@@ -4,11 +4,11 @@ import './BlobSvg.css'; // Import your CSS file
 
 const BlobSvg = () => {
   return (
-    <svg
+    <svg className='blobSvg'
       version="1.1"
       viewBox="0 0 500 500"
-      width="40%"
-      height="30%"
+      width="100%"
+      height="500px"
       id="blobSvg"
     >
  

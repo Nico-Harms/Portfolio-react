@@ -17,29 +17,33 @@ export default function Home() {
     <div className='siteWrapper'>
 
       <main className="mainWrapper">
-        <div className='textToPictureWrapper'>
-          <div className='textWrapperMain'>
-            <div className='headerContainer'>
-              <h2>Hej, jeg er Nicolai!</h2>
+      <div className='textToPictureWrapper'>
+  <div className='textWrapperMain'>
+    <div className='headerContainer'>
+      <h2 className='mainHeaderDesktop'>Hej, jeg er Nicolai!</h2>
+      <h3>Front-End Developer med passion for inaktive løsninger og design</h3>
+      <div className='soMe'>
+        <a className='github' href="#"><FontAwesomeIcon icon={faGithub} /></a>
+        <a className='linkedin' href="#"><FontAwesomeIcon icon={faLinkedin} /></a>
+      </div>
+    </div>
+  </div>
+  <div className='svgHeaderWrapper'> 
+  <h2 className='mainHeaderMobile'>Hej, jeg er Nicolai!</h2>
+  <BlobSvg />
+  </div>
+</div>
 
-              <h3>Front-End Developer med passion for inaktive løsninger og design</h3>
-              <div className='soMe'>
-                <a className='github' href="#"><FontAwesomeIcon icon={faGithub} /></a>
-                <a className='linkedin' href="#"><FontAwesomeIcon icon={faLinkedin} /></a>
-              </div>
-            </div>
-          </div>
-          <BlobSvg />
-        </div>
 
         <div className='techStack'>
           <h5 className='techHeader'>Tech Stack</h5>
           <hr className='techHr' />
+          <div className='techIconWrapper'>
           <FontAwesomeIcon className='techStackIcon' color='#f06529' icon={faHtml5} />
           <FontAwesomeIcon className='techStackIcon' color="#2965f1" icon={faCss3Alt} />
           <FontAwesomeIcon className='techStackIcon' color="#f0db4f" icon={faSquareJs} />
           <FontAwesomeIcon className='techStackIcon' color="#61DBFB" icon={faReact} />
-
+          </div>
           <hr className='techHr' />
         </div>
         <ChaningText />
@@ -57,12 +61,13 @@ export default function Home() {
 
 
       <HovereffectProjects />
+      <h2 className='contactMeMobile'>Contact me</h2>
       <div className='backgroundColorWrapper'>
 
         <section className='contactMeWrapper'>
 
           <article className='contactMeText'>
-            <h2>Contact me</h2>
+            <h2 className='contactMeDesktop'>Contact me</h2>
             <h3>If you have any questions, or want to work with me, do not hesitate to contact me.</h3>
             <div className='iconWrapper'>
   <div className='contactMeBoxes'>
