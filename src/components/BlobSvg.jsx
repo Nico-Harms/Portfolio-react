@@ -1,8 +1,7 @@
 import React from 'react';
-import profilepicture from '../assets/profilepicture.png';
 import './BlobSvg.css'; // Import your CSS file
 
-const BlobSvg = () => {
+const BlobSvg = ({ profilePicture }) => {
   return (
     <svg className='blobSvg'
       version="1.1"
@@ -21,15 +20,15 @@ const BlobSvg = () => {
         />
       </clipPath>
      <image
-  x="0"
-  y="0"
-  width="100%"
-  height="100%"
-  xlinkHref={profilepicture}
-  preserveAspectRatio="xMidYMid slice" // Adjust the value to "slice"
-  clipPath="url(#shape)"
-  className="blob-image"
-/>
+      x="0"
+      y="0"
+      width="100%"
+      height="100%"
+      xlinkHref={profilePicture}
+      preserveAspectRatio="xMidYMid slice" // Adjust the value to "slice"
+      clipPath="url(#shape)"
+      className="blob-image"
+    />
 
     </svg>
   );

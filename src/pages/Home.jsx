@@ -5,6 +5,7 @@ import { faHtml5, faSquareJs, faReact, faCss3Alt, faGithub, faLinkedin } from '@
 import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons'
 import aboutMePicture from '../assets/aboutmepicture.png';
 import contactpicture from '../assets/contactmepicture.webp';
+import profilePicture from '../assets/profilepicture.png';
 
 
 
@@ -30,7 +31,7 @@ export default function Home() {
   </div>
   <div className='svgHeaderWrapper'> 
   <h2 className='mainHeaderMobile'>Hej, jeg er Nicolai!</h2>
-  <BlobSvg />
+  <BlobSvg profilePicture={profilePicture} />
   </div>
 </div>
 
