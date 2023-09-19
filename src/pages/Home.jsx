@@ -19,7 +19,6 @@ export default function Home() {
       <main className="mainWrapper">
         <div className='textToPictureWrapper'>
           <div className='textWrapperMain'>
-            <SlideInOnScroll direction={'left'}>
 
               <div className='headerContainer'>
                 <h2 className='mainHeaderDesktop'>Hej, jeg er Nicolai!</h2>
@@ -30,37 +29,30 @@ export default function Home() {
                   <a className='linkedin' href="#"><FontAwesomeIcon icon={faLinkedin} /></a>
                 </div>
               </div>
-            </SlideInOnScroll>
           </div>
-          <SlideInOnScroll direction={'right'}>
             <div className='svgHeaderWrapper'>
               <h2 className='mainHeaderMobile'>Hej, jeg er Nicolai!</h2>
               <BlobSvg profilePicture={profilePicture} />
             </div>
-          </SlideInOnScroll>
         </div>
 
 
         <div className='techStack'>
           <h5 className='techHeader'>Tech Stack</h5>
           <hr className='techHr' />
-          <SlideInOnScroll direction={'bottom'}>
             <div className='techIconWrapper'>
               <FontAwesomeIcon className='techStackIcon' color='#f06529' icon={faHtml5} />
               <FontAwesomeIcon className='techStackIcon' color="#2965f1" icon={faCss3Alt} />
               <FontAwesomeIcon className='techStackIcon' color="#f0db4f" icon={faSquareJs} />
               <FontAwesomeIcon className='techStackIcon' color="#61DBFB" icon={faReact} />
             </div>
-          </SlideInOnScroll>
           <hr className='techHr' />
         </div>
         <ChaningText />
         <div className='aboutMeWrapper' style={{ backgroundImage: `url(${aboutMePicture})` }}>
-          <SlideInOnScroll direction={'left'}>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam dignissimos et quia quis est sed nihil quas, ea deleniti enim dolorum ab libero, maxime placeat porro autem, iusto saepe sequi?
             </p>
-          </SlideInOnScroll>
 
           {/* You can add any additional styling here */}
         </div>
