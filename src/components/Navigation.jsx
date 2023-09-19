@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import logo from '../assets/nhlogo.webp';
-
+//import css from pages 
 export default function Navigation() {
   const [isMenuOpen, setMenuOpen] = useState(false);
 
@@ -11,7 +11,9 @@ export default function Navigation() {
 
   return (
     <header className="headerWrapper">
-      <img className="logo" src={logo} alt="" />
+     <NavLink to="/" end>
+        <img className="logo" src={logo} alt="Nicolai Harms logo" />
+      </NavLink>
 
       <div className={`hamburger ${isMenuOpen ? "active" : ""}`}>
         <label className="hamburger-label" htmlFor="menuToggle">
