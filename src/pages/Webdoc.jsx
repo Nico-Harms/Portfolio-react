@@ -10,10 +10,27 @@ import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
 // import the css 
 import '../components/ProjectDescription.css';
+import Projectstext from "../components/ProjectsText";
+import { useEffect, useState } from "react";
 
 
 
 export default function Webdoc() {
+
+
+    const [posts, setposts] = useState([]);
+
+    useEffect(() => {
+      async function getData() {
+      const response = await fetch("https://wordpress.harmscreativity.dk/wp-json/wp/v2/posts?_embed&categories=3");
+      const data = await response.json();
+      setposts(data);
+    }
+    getData();
+    }, []);
+  
+
+
     return (
     <div className="SiteWrapper">
         <section className="linkWrapper">
@@ -27,9 +44,17 @@ export default function Webdoc() {
             </div>
             <div className="projectDescription">
                 <h2>Webdoc - AI i undervisningen</h2>
-                <p>I denne omgang fik vi til opgave at lave en Webdoc om et selvvalgt emne. Min gruppe og jeg valgte og undersøge AI i undervisningen.
+                <p>Disclaimer - Dette projekt er ikke lavet med hensigt på at være responsivt, da det ikke var inden for vores fokusområde.
                 </p>
-                <h5>Programmer jeg brugte i dette projekt</h5>
+                 <p>
+                 I denne omgang fik vi til opgave at lave en Webdoc om et selvvalgt emne. Min gruppe og jeg valgte at undersøge AI i undervisningen, fordi hvem synes ikke AI er en smule spændende og skræmmende på samme tid? Vi fokuserede på at skabe en spændende fortælling ved hjælp af grafiske og dynamiske elementer, så vi kunne formidle flere oplysninger med minimal brug af store tekster. 
+                 Alle informtioner og interviews er indsamlet af os selv, og vi har selv stået for at lave alt indholdet. 
+                   </p>
+                    
+                
+                {posts.map(post => (
+                  <Projectstext key={post.id} post={post} />
+                ))}
                 <hr />
                 <div className="ikonProgrammer">
                     <img src={figma} alt="Figma" />

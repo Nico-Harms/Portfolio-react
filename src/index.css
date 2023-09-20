@@ -1,3 +1,8 @@
+* {
+  text-decoration: none;
+  scroll-behavior: smooth
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -8,6 +13,7 @@ body {
   --beigebg: #836353;
 
 }
+
 
 .headerWrapper {
   display: flex;
@@ -129,17 +135,32 @@ body {
 .nav-item {
   position: relative;
   display: inline-block;
-  /* Ensures the underline only covers the link's text */
-  padding-bottom: 5px;
-  /* Adjust this value to control the underline's thickness */
-  transition: border-bottom 0.3s ease;
-  /* Smooth transition for the underline */
+
 }
 
-.nav-item:hover {
-  border-bottom: 2px solid #ffc506;
-  /* Change the color and thickness as needed */
+
+.nav-item a::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  border-radius: 20px;
+  background-color: #e6e6e6;
+  left: 0;
+  bottom: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform .4s ease-in-out;
 }
+
+.nav-item a:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+
+
+
 
 
 /*END OF BURGER-MENU STYLING */
@@ -327,22 +348,32 @@ body {
 /* YourComponent.module.css */
 .aboutMeWrapper {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 20% 40%;
   height: 70vh;
   width: auto;
+ 
+}
+.aboutMeWrapper h3 {
+  color: white;
+  font-size: clamp(2rem, 1.5385rem + 2.0513vw, 4rem);
+  padding: 0;
+ 
 }
 
 .aboutMeWrapper p {
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  font-size: clamp(1.5rem, 1.0385rem + 2.0513vw, 3.5rem);  color: rgb(255, 255, 255);
+  font-size: clamp(1rem, 0.5385rem + 2.0513vw, 3rem);
+   color: rgb(255, 255, 255);
   width: 80%;
-  line-height: 3rem;
-  letter-spacing: 2px;
+  font-weight: 800;
+  letter-spacing: 2px;  
 }
 
 
@@ -426,11 +457,16 @@ ul li {
   width: 100%;
   /* Adjust as needed */
   margin: 0;
-  height: 70vh;
+  height: 90vh;
   position: relative;
+
 
 }
 
+.label-mask-wrap h6 {
+  font-size: 2rem;
+
+}
 
 .portfolio-picture {
   position: absolute;
@@ -460,6 +496,9 @@ ul li {
   height: 200px;
   font-size: clamp(4rem, 3.3077rem + 3.0769vw, 7rem);
   position: relative;
+}
+.portfolio-item img {
+  display: none;
 }
 
 /* Kontrast masken */
@@ -651,6 +690,8 @@ ul li {
 
 .contactMeMobile {
   display: none;
+  font-size: clamp(3rem, 1.8462rem + 5.1282vw, 8rem);
+
 }
 
 
@@ -715,8 +756,6 @@ ul li {
 
 
 
-/* End of  Footer */
-
 /* Media query for 400px */
 
 @media screen and (max-width: 650px) {
@@ -765,6 +804,9 @@ ul li {
 
   .techIconWrapper {
     display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    gap: 0;
   }
 
 
@@ -773,6 +815,15 @@ ul li {
   }
 
   /* End of main content adjustments */
+
+  .aboutMeWrapper p {
+    line-height: 2.5rem;
+  }
+
+
+
+
+
 
 
   .contactMeDesktop {
@@ -813,5 +864,22 @@ ul li {
 
   }
 
+  .portfolio-wrapper {
+    height: 100%;
+  }
 
+  .portfolio-item img {
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    filter: blur(2px);
+  }
+  .portfolio-wrapper a {
+    color: white;
+  }
+  .portfolio-wrapper:before {
+    background-color: transparent;
+  }
 }

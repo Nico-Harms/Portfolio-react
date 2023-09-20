@@ -1,0 +1,55 @@
+.randomTextWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 1px;
+    color: white;
+    margin-bottom: 5%;
+    text-align: center;
+    width: 100%;
+  }
+
+ .randomTextWrapper h2 {
+  font-size: clamp(1.5rem, 0.9231rem + 2.5641vw, 4rem);  width: 100%
+ }
+
+
+  .random-word {
+    display: inline-block;
+    text-transform: uppercase;
+    color: #bbaadd;
+    animation: slidedown 4s infinite;
+    -webkit-animation: slidedown 4s infinite;
+    -moz-animation: slidedown 4s infinite;
+    font-size: clamp(1.5rem, 1.0385rem + 2.0513vw, 3.5rem); 
+       width: 100%;
+    white-space: nowrap;
+  }
+  
+  @keyframes slidedown {
+    0% {
+      opacity: 50;
+    }
+  
+    5% {
+      opacity: 0;
+      transform: translateY(0.5em);
+    }
+  
+    7% {
+      transform: translateY(-1em);
+    }
+  
+    10% {
+      opacity: 0;
+    }
+  
+    20% {
+      transform: translateY(0);
+      opacity: 100;
+    }
+  }
+
+  
+  

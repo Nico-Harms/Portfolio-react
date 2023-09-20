@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import logo from '../assets/nhlogo.webp';
-//import css from pages 
+
 export default function Navigation() {
   const [isMenuOpen, setMenuOpen] = useState(false);
 
@@ -9,9 +9,13 @@ export default function Navigation() {
     setMenuOpen(!isMenuOpen);
   };
 
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
+
   return (
     <header className="headerWrapper">
-     <NavLink to="/" end>
+      <NavLink to="/" end>
         <img className="logo" src={logo} alt="Nicolai Harms logo" />
       </NavLink>
 
@@ -28,20 +32,25 @@ export default function Navigation() {
         <nav className={`nav-menu ${isMenuOpen ? "active" : ""}`}>
           <ul>
             <li className="nav-item">
-              <NavLink to="/" end className="nav-link">
-                Home
+              <NavLink to="/" end className="nav-link" onClick={closeMenu}>
+                Forside
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to="/about" className="nav-link">About</NavLink>
+              <a href="#aboutMe" onClick={closeMenu}>
+                Om mig
+              </a>
             </li>
             <li className="nav-item">
-              <NavLink to="/projects" className="nav-link">Projects</NavLink>
+              <a href="#projects" onClick={closeMenu}>
+                Projektor
+              </a>
             </li>
             <li className="nav-item">
-              <NavLink to="/contact" className="nav-link">Contact</NavLink>
+              <a href="#contactMe" onClick={closeMenu}>
+                Kontakt mig
+              </a>
             </li>
-            
           </ul>
         </nav>
       </div>

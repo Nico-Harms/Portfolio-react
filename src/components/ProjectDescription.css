@@ -11,8 +11,7 @@ background: linear-gradient(0deg, rgba(62,53,55,1) 0%, rgba(9,18,34,1) 15%, rgba
 
 .linkWrapper {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .pictureButtonWrapper {
@@ -38,7 +37,8 @@ background: linear-gradient(0deg, rgba(62,53,55,1) 0%, rgba(9,18,34,1) 15%, rgba
     width: 50%;
     color: white;
     height: 100%;
-    margin-bottom: 10%;
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
 
 .projectDescription h2 {
@@ -51,7 +51,7 @@ background: linear-gradient(0deg, rgba(62,53,55,1) 0%, rgba(9,18,34,1) 15%, rgba
   display: none;
 }
 
-.projectDescription h5 {
+.projectDescription h3 {
   font-size: clamp(2rem, 0.5385rem + 2.0513vw, 3rem);    
   text-align: center;
 }
@@ -73,8 +73,7 @@ background: linear-gradient(0deg, rgba(62,53,55,1) 0%, rgba(9,18,34,1) 15%, rgba
 
 .projectDescription p {
     width: 80%;
-    font-size: clamp(1.7rem, -0.5rem + 2.5vw, 3rem);
-    line-height: 3rem;
+    font-size: clamp(1rem, 0.7692rem + 1.0256vw, 2rem);    line-height: 3rem;
     letter-spacing: 2px;
     
 }

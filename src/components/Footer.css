@@ -2,7 +2,7 @@
 /* Footer styles */
 .footerWrapper {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     height: 10vh;
     margin: 0 10%;
@@ -12,10 +12,5 @@
   .footerWrapper a {
     color: white;
     text-decoration: none;
-  }
-  
-  .footerWrapper p {
-    margin: 0;
-    padding: 0;
   }
   

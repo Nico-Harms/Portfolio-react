@@ -1,7 +1,7 @@
 import React from 'react';
 import HovereffectProjects from '../components/HovereffectsProjects.jsx';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHtml5, faSquareJs, faReact, faCss3Alt, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faHtml5, faSquareJs, faReact, faCss3Alt, faGithub, faLinkedin, faWordpress} from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons'
 import aboutMePicture from '../assets/aboutmepicture.png';
 import contactpicture from '../assets/contactmepicture.webp';
@@ -9,6 +9,7 @@ import profilePicture from '../assets/profilepicture.png';
 import BlobSvg from '../components/BlobSvg.jsx';
 import Footer from '../components/Footer.jsx';
 import SlideInOnScroll from '../components/SlideInOnScroll.jsx';
+ import ChangingText from '../components/ChangingText.jsx';
 
 
 
@@ -25,8 +26,8 @@ export default function Home() {
 
                 <h3>Front-End Developer med passion for inaktive løsninger og design</h3>
                 <div className='soMe'>
-                  <a className='github' href="#"><FontAwesomeIcon icon={faGithub} /></a>
-                  <a className='linkedin' href="#"><FontAwesomeIcon icon={faLinkedin} /></a>
+                  <a className='github' target='_blank' href="https://github.com/Nico-Harms"><FontAwesomeIcon icon={faGithub} /></a>
+                  <a className='linkedin' target='_blank' href="https://www.linkedin.com/in/nicolai-harms-0847551b8/?originalSubdomain=dk"><FontAwesomeIcon icon={faLinkedin} /></a>
                 </div>
               </div>
           </div>
@@ -45,10 +46,13 @@ export default function Home() {
               <FontAwesomeIcon className='techStackIcon' color="#2965f1" icon={faCss3Alt} />
               <FontAwesomeIcon className='techStackIcon' color="#f0db4f" icon={faSquareJs} />
               <FontAwesomeIcon className='techStackIcon' color="#61DBFB" icon={faReact} />
+              <FontAwesomeIcon className='techStackIcon' color="#21759b" icon={faWordpress} />
             </div>
           <hr className='techHr' />
         </div>
-        <div className='aboutMeWrapper' style={{ backgroundImage: `url(${aboutMePicture})` }}>
+        <ChangingText />
+        <div id='aboutMe' className='aboutMeWrapper' style={{ backgroundImage: `url(${aboutMePicture})` }}>
+          <h3>Lidt om mig</h3>
             <p>
             Jeg er 25 år gammel og bosat i Aarhus. Fra en tidlig alder har jeg altid haft en stærk passion for IT. 
             Min fascination for teknologi og kreativ tænkning har drevet mig til at forfølge en karriere som frontend-udvikler. 
@@ -68,13 +72,14 @@ export default function Home() {
       <h2 className='contactMeMobile'>Contact me</h2>
       <div className='backgroundColorWrapper'>
 
-        <section className='contactMeWrapper'>
+        <section id='contactMe' className='contactMeWrapper'>
 
           <article className='contactMeText'>
-            <h2 className='contactMeDesktop'>Contact me</h2>
-            <h3>If you have any questions, or want to work with me, do not hesitate to contact me.</h3>
+            <h2 className='contactMeDesktop'>Kontakt mig</h2>
+            <h3>
+              Hvis du har nogle spørgsmål, eller ønsker at arbejde sammen med mig, så tøv ikke med at kontakte mig.
+            </h3>
            
-           <SlideInOnScroll direction={'left'}>
             <div className='iconWrapper'>
               <div className='contactMeBoxes'>
                 <a href="#" className='contactLink'>
@@ -83,19 +88,19 @@ export default function Home() {
                 </a>
               </div>
               <div className='contactMeBoxes'>
-                <a href="#" className='contactLink'>
+              <a href="mailto: nicolai.harms@gmail.com" className='contactLink'>
                   <FontAwesomeIcon className='contactIcons' icon={faEnvelope} />
                   <p className='contactText'>Nicolai.harms@gmail.com</p>
+                  
                 </a>
               </div>
               <div className='contactMeBoxes'>
-                <a href="#" className='contactLink'>
+                <a target='_blank' href="https://www.linkedin.com/in/nicolai-harms-0847551b8/?originalSubdomain=dk" className='contactLink'>
                   <FontAwesomeIcon className='contactIcons' icon={faLinkedin} />
                   <p className='contactText'>Nicolai Harms</p>
                 </a>
               </div>
             </div>
-            </SlideInOnScroll>
 
           </article>
           <img className='contactMeImage' src={contactpicture} alt="" width="100%" height="100%" />

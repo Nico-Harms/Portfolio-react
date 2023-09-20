@@ -35,14 +35,17 @@ export default function Capo() {
             <h2 className="MobileHeader">CAPO Vin & Mad bar</h2>
             <BlobSvg profilePicture={capo} />
                 <div className="buttonWrapper">
-                    <a className="projectBtn" href="https://harmscreativity.dk/#vin-rum">LIVE DEMO</a>
-                    <a className="projectBtn" href="https://github.com/madsnbkristensen/Mobile-first-capo?fbclid=IwAR1w0bOCbxqwvpK_a5DGXL_SNVFYBWYbx1vgDs7RfG2vzREBAFUYE5zqWWM">CODE</a>
+                    <a className="projectBtn" target="_blank" href="https://harmscreativity.dk/#vin-rum">LIVE DEMO</a>
+                    <a className="projectBtn" target="_blank" href="https://github.com/madsnbkristensen/Mobile-first-capo?fbclid=IwAR1w0bOCbxqwvpK_a5DGXL_SNVFYBWYbx1vgDs7RfG2vzREBAFUYE5zqWWM">CODE</a>
                 </div>
             </div>
             <div className="projectDescription">
                 <h2>CAPO Vin & Mad bar</h2>
-                <p>Capo var det første projekt, hvor vi fik til opgave og lave en hjemmeside, som var responsiv.
-                    Udarbejdelsen af dette projekt, har været i dialog med ejerne af Capo samt de besøgende af restauranten.
+                <p>Capo var det første projekt, hvor vi fik til opgave at lave en hjemmeside, der var responsiv. Udarbejdelsen 
+                    af dette projekt har været i dialog med ejerne af Capo samt de besøgende på restauranten. Nøgleordene fra ejerne var, at 
+                    hjemmesiden skulle være simpel, overskuelig og informativ. De ønskede at bevare deres image som et mysterium, så gæsterne ville komme ned 
+                    og blive overrasket over det nye vinkort og menukort. Derfor har vi valgt at begrænse informationerne, så gæsterne bliver nysgerrige og 
+                    beslutter at besøge restauranten
                 </p>
                 {posts.map(post => (
                   <Projectstext key={post.id} post={post} />
