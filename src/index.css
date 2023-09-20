@@ -4,9 +4,9 @@
 
 } 
 
-p {
-    font-family: 'Abhaya Libre', serif;
-     }
+p  {
+  font-family: 'Abhaya Libre', serif;  
+   }
 
 
 body {
@@ -377,7 +377,7 @@ body {
   font-size: clamp(.7rem, 0.5385rem + 2.0513vw, 3rem);
    color: rgb(255, 255, 255);
   width: 80%;
-  font-weight: 800;
+  font-weight: 500; 
   max-height: 100%;
   letter-spacing: 1.2px;  
 }
@@ -685,6 +685,7 @@ ul li {
   margin: 0 auto;
   width: 80%;
   color: white;
+  font-weight: 100;
 }
 
 
