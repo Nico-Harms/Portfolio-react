@@ -15,10 +15,11 @@ export default function Capo() {
         <div className="SiteWrapper">
         <section className="linkWrapper">
            <div className="pictureButtonWrapper">
+            <h2 className="MobileHeader">CAPO Vin & Mad bar</h2>
             <BlobSvg profilePicture={capo} />
                 <div className="buttonWrapper">
-                    <a className="projectBtn" href="">LIVE DEMO</a>
-                    <a className="projectBtn" href="">CODE</a>
+                    <a className="projectBtn" href="https://harmscreativity.dk/#vin-rum">LIVE DEMO</a>
+                    <a className="projectBtn" href="https://github.com/madsnbkristensen/Mobile-first-capo?fbclid=IwAR1w0bOCbxqwvpK_a5DGXL_SNVFYBWYbx1vgDs7RfG2vzREBAFUYE5zqWWM">CODE</a>
                 </div>
             </div>
             <div className="projectDescription">

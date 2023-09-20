@@ -18,10 +18,11 @@ export default function Vinhandel() {
     <div className="SiteWrapper">
         <section className="linkWrapper">
             <div className="pictureButtonWrapper">
+                <h2 className="MobileHeader">Aarhus Vinhandel</h2>
             <BlobSvg profilePicture={vinhandel} />
                 <div className="buttonWrapper">
-                    <a className="projectBtn" target="_blank" href="https://webdoc-ai.harmscreativity.dk/">LIVE DEMO</a>
-                    <a className="projectBtn" target="_blank" href="https://github.com/Nico-Harms/Webdoc">CODE</a>
+                    <a className="projectBtn" target="_blank" href="https://aarhusvinhandel.harmscreativity.dk/">LIVE DEMO</a>
+                    <a className="projectBtn" target="_blank" href="https://github.com/Nico-Harms/2-semester-eksamen">CODE</a>
                 </div>
             </div>
             <div className="projectDescription">

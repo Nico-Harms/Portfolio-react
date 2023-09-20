@@ -7,9 +7,10 @@ import aboutMePicture from '../assets/aboutmepicture.png';
 import contactpicture from '../assets/contactmepicture.webp';
 import profilePicture from '../assets/profilepicture.png';
 import BlobSvg from '../components/BlobSvg.jsx';
-import ChaningText from '../components/ChaningText.jsx';
 import Footer from '../components/Footer.jsx';
 import SlideInOnScroll from '../components/SlideInOnScroll.jsx';
+import WordChange from '../components/Wordchange.jsx';
+
 
 
 export default function Home() {
@@ -48,7 +49,7 @@ export default function Home() {
             </div>
           <hr className='techHr' />
         </div>
-        <ChaningText />
+      <WordChange />
         <div className='aboutMeWrapper' style={{ backgroundImage: `url(${aboutMePicture})` }}>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam dignissimos et quia quis est sed nihil quas, ea deleniti enim dolorum ab libero, maxime placeat porro autem, iusto saepe sequi?

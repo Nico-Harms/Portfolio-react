@@ -18,6 +18,7 @@ export default function Webdoc() {
     <div className="SiteWrapper">
         <section className="linkWrapper">
             <div className="pictureButtonWrapper">
+                <h2 className="MobileHeader">Webdoc I undervisningen</h2>
             <BlobSvg profilePicture={webdoc} />
                 <div className="buttonWrapper">
                     <a className="projectBtn" target="_blank" href="https://webdoc-ai.harmscreativity.dk/">LIVE DEMO</a>
