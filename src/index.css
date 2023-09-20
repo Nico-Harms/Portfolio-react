@@ -1,7 +1,13 @@
 * {
   text-decoration: none;
-  scroll-behavior: smooth
-}
+  scroll-behavior: smooth;
+
+} 
+
+p {
+    font-family: 'Abhaya Libre', serif;
+     }
+
 
 body {
   padding: 0;
@@ -117,7 +123,7 @@ body {
 
 .nav-item {
   text-align: center;
-  font-size: 5rem;
+  font-size: clamp(3rem, 2.5385rem + 2.0513vw, 5rem);
   color: white;
 }
 
@@ -354,7 +360,7 @@ body {
   background-position: 20% 40%;
   height: 70vh;
   width: auto;
- 
+
 }
 .aboutMeWrapper h3 {
   color: white;
@@ -683,9 +689,10 @@ ul li {
 
 
 .contactMeText h2 {
-  font-size: clamp(3rem, 1.8462rem + 5.1282vw, 8rem);
-  margin-top: 20px;
+  font-size: clamp(3rem, 2.0769rem + 4.1026vw, 7rem);
+    margin-top: 20px;
   white-space: nowrap;
+  width: 100%;
 }
 
 .contactMeMobile {
@@ -817,7 +824,7 @@ ul li {
   /* End of main content adjustments */
 
   .aboutMeWrapper p {
-    line-height: 2.5rem;
+    line-height: 2rem;
   }
 
 
@@ -836,7 +843,7 @@ ul li {
     background-color: var(--bluebg);
     height: 100%;
     margin: 0;
-    padding: 20px;
+    padding: 40px 20px;
     color: white;
   }
 
@@ -881,5 +888,9 @@ ul li {
   }
   .portfolio-wrapper:before {
     background-color: transparent;
+  
+  }
+  .portfolio-wrapper .portfolio-mask {
+    width: auto;
   }
 }
