@@ -190,13 +190,11 @@ body {
 
 .techStack {
   font-size: clamp(2rem, -0.0488rem + 2.4390vw, 3rem);
-  width: 100%;
   padding: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: clamp(0.2rem, 1.282vw + 0.215rem, 1.2rem);
-  margin: 40px auto;
   color: white;
 }
 
@@ -350,6 +348,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 20% 40%;
@@ -361,7 +360,7 @@ body {
   color: white;
   font-size: clamp(2rem, 1.5385rem + 2.0513vw, 4rem);
   padding: 0;
- 
+ margin: 0;
 }
 
 .aboutMeWrapper p {
@@ -369,11 +368,12 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  font-size: clamp(1rem, 0.5385rem + 2.0513vw, 3rem);
+  font-size: clamp(.7rem, 0.5385rem + 2.0513vw, 3rem);
    color: rgb(255, 255, 255);
   width: 80%;
   font-weight: 800;
-  letter-spacing: 2px;  
+  max-height: 100%;
+  letter-spacing: 1.2px;  
 }
 
 
