@@ -9,7 +9,6 @@ import profilePicture from '../assets/profilepicture.png';
 import BlobSvg from '../components/BlobSvg.jsx';
 import Footer from '../components/Footer.jsx';
 import SlideInOnScroll from '../components/SlideInOnScroll.jsx';
-import WordChange from '../components/Wordchange.jsx';
 
 
 
@@ -49,10 +48,11 @@ export default function Home() {
             </div>
           <hr className='techHr' />
         </div>
-      <WordChange />
         <div className='aboutMeWrapper' style={{ backgroundImage: `url(${aboutMePicture})` }}>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam dignissimos et quia quis est sed nihil quas, ea deleniti enim dolorum ab libero, maxime placeat porro autem, iusto saepe sequi?
+            Jeg er 25 år gammel og bosat i Aarhus. Fra en tidlig alder har jeg altid haft en stærk passion for IT. 
+            Min fascination for teknologi og kreativ tænkning har drevet mig til at forfølge en karriere som frontend-udvikler. 
+            Jeg elsker at dykke ned i komplekse problemer og finde innovative løsninger, samtidig med at jeg bruger min kreativitet til at forme digitale idéer til virkelighed.
             </p>
 
           {/* You can add any additional styling here */}

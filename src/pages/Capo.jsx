@@ -7,10 +7,27 @@ import capo from '../assets/capo.webp';
 import '../components/ProjectDescription.css';
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
+import { useEffect, useState } from "react";
+import Projectstext from "../components/ProjectsText";
 
 
 
 export default function Capo() {
+    const [posts, setposts] = useState([]);
+
+    useEffect(() => {
+      async function getData() {
+      const response = await fetch("https://wordpress.harmscreativity.dk/wp-json/wp/v2/posts?_embed&categories=3");
+      const data = await response.json();
+      setposts(data);
+    }
+    getData();
+    }, []);
+  
+
+
+
+    
     return (
         <div className="SiteWrapper">
         <section className="linkWrapper">
@@ -27,7 +44,10 @@ export default function Capo() {
                 <p>Capo var det første projekt, hvor vi fik til opgave og lave en hjemmeside, som var responsiv.
                     Udarbejdelsen af dette projekt, har været i dialog med ejerne af Capo samt de besøgende af restauranten.
                 </p>
-                <h5>Programmer jeg brugte i dette projekt</h5>
+                {posts.map(post => (
+                  <Projectstext key={post.id} post={post} />
+                ))}
+    
                 <hr />
                 <div className="ikonProgrammer">
                     <img src={photoshop} alt="" />
@@ -45,4 +65,7 @@ export default function Capo() {
            <Footer />
         </div>
     )
+
+
+    
 }

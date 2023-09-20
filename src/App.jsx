@@ -11,16 +11,6 @@ import Vinhandel from "./pages/Vinhandel";
 import { useEffect, useState } from "react";
 
 export default function App() {
-  const [posts, setposts] = useState([]);
-
-  useEffect(() => {
-    async function getData() {
-    const response = await fetch("https://wordpress.harmscreativity.dk/wp-json/wp/v2/posts?_embed&categories=1");
-    const data = await response.json();
-    setposts(data);
-  }
-  getData();
-  }, []);
 
   
   return (
