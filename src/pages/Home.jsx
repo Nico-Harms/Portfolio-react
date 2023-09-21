@@ -68,7 +68,7 @@ export default function Home() {
 
 
       <HovereffectProjects />
-      <h2 className='contactMeMobile'>Contact me</h2>
+      <h2 className='contactMeMobile'>Kontakt mig</h2>
       <div className='backgroundColorWrapper'>
 
         <section id='contactMe' className='contactMeWrapper'>
