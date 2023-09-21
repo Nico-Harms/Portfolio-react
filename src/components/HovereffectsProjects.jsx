@@ -24,7 +24,6 @@ export default function HovereffectProjects() {
     const portfolioWrapper = document.querySelector('.portfolio-wrapper');
     const portfolioList = document.querySelector('.portfolio'); // Define portfolioList here
     const portfolioPicture = document.getElementById(portfolioItem.id.split("-")[0]+"-image"); 
-    console.log("portfolio.item.id", portfolioItem.id.split("-")[0]);
     const hasActivePortfolio = Array.from(portfolioItems).some((item) =>
       item.classList.contains('active')
     );

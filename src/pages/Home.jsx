@@ -24,7 +24,7 @@ export default function Home() {
               <div className='headerContainer'>
                 <h2 className='mainHeaderDesktop'>Hej, jeg er Nicolai!</h2>
 
-                <h3>Front-End Developer med passion for inaktive løsninger og design</h3>
+                <h3>Front-End Developer med passion for internaktive løsninger og design</h3>
                 <div className='soMe'>
                   <a className='github' target='_blank' href="https://github.com/Nico-Harms"><FontAwesomeIcon icon={faGithub} alt="Github" /></a>
                   <a className='linkedin' target='_blank' href="https://www.linkedin.com/in/nicolai-harms-0847551b8/?originalSubdomain=dk"><FontAwesomeIcon icon={faLinkedin} alt="Linkedin" /></a>
