@@ -43,7 +43,7 @@ export default function Navigation() {
             </li>
             <li className="nav-item">
               <a href="#projects" onClick={closeMenu}>
-                Projektor
+                Projekter
               </a>
             </li>
             <li className="nav-item">

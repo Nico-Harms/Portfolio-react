@@ -8,7 +8,6 @@ import contactpicture from '../assets/contactmepicture.webp';
 import profilePicture from '../assets/profilepicture.png';
 import BlobSvg from '../components/BlobSvg.jsx';
 import Footer from '../components/Footer.jsx';
-import SlideInOnScroll from '../components/SlideInOnScroll.jsx';
  import ChangingText from '../components/ChangingText.jsx';
 
 
@@ -76,9 +75,10 @@ export default function Home() {
 
           <article className='contactMeText'>
             <h2 className='contactMeDesktop'>Kontakt mig</h2>
-            <h3>
-              Hvis du har nogle spørgsmål, eller ønsker at arbejde sammen med mig, så tøv ikke med at kontakte mig.
-            </h3>
+            <p className='contactMeBreadText'>
+              I skal hyre mig fordi jeg arbejder godt sammen i teams, jeg er målrettet ambitøs også er jeg lige den i mangler.
+              Hvis i ellers har nogle spørgsmål, eller ønsker at arbejde sammen med mig, så tøv ikke med at kontakte mig.
+            </p>
            
             <div className='iconWrapper'>
               <div className='contactMeBoxes'>
@@ -103,7 +103,10 @@ export default function Home() {
             </div>
 
           </article>
+          <div className='contactMeImageWrapper'>
           <img className='contactMeImage' src={contactpicture} alt="" width="100%" height="100%" />
+
+          </div>
         </section>
 
         <Footer />

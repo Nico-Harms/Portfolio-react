@@ -4,6 +4,7 @@ import webdocBackground from '../assets/webdoc.webp';
 import vinhandelBackground from '../assets/aarhusvinhandel.webp';
 import { Link } from 'react-router-dom';
 
+
 // Import other background images as needed.
 
 
@@ -63,8 +64,8 @@ export default function HovereffectProjects() {
       <ul className="portfolio">
         <div className="project-label">
           <div className="label-mask-wrap">
-            <h6 className="portfolio-mask"><span>MY PROJECTS</span></h6>
-            <h6 className="masked">MY PROJECTS</h6>
+            <h6 className="portfolio-mask"><span>MINE PROJEKTER</span></h6>
+            <h6 className="masked">MINE PROJEKTER</h6>
           </div>
         </div>
         <li id='capo-hover'
@@ -75,11 +76,11 @@ export default function HovereffectProjects() {
           <div className="portfolio-mask-wrap">
             <Link to="/Capo">
               <a href="#">
-                <div className="portfolio-mask"><span>capo</span></div>
-
+                <div className="portfolio-mask"><span>capo</span> 
+                </div>
                 <span
                   className="fake-link"
-                  data-mask-link="capo"
+                  data-mask-link="capo" 
                   onMouseEnter={handleTextHover}
                   onMouseLeave={handleTextHoverEnd}
                 ></span>
