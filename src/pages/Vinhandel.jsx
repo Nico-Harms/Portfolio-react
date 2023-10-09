@@ -12,6 +12,9 @@ import { useEffect, useState } from "react";
 import Projectstext from "../components/ProjectsText";
 // import the css 
 import '../components/ProjectDescription.css';
+import { Slide } from "react-reveal";
+import Bounce from 'react-reveal/Bounce';
+import Pulse from 'react-reveal/Pulse';
 
 
 
@@ -38,8 +41,12 @@ export default function Vinhandel() {
                 <h2 className="MobileHeader">Aarhus Vinhandel</h2>
             <BlobSvg profilePicture={vinhandel} />
                 <div className="buttonWrapper">
+                    <Slide left>
                     <a className="projectBtn" target="_blank" href="https://aarhusvinhandel.harmscreativity.dk/">LIVE DEMO</a>
+                    </Slide>
+                    <Slide right>
                     <a className="projectBtn" target="_blank" href="https://github.com/Nico-Harms/2-semester-eksamen">CODE</a>
+                    </Slide>
                 </div>
             </div>
             <div className="projectDescription">
@@ -49,6 +56,8 @@ export default function Vinhandel() {
                   <Projectstext key={post.id} post={post} />
                 ))}
                 <hr />
+                <Bounce bottom cascade>
+
                 <div className="ikonProgrammer">
                     <img src={figma} alt="Figma" />
                     <img src={html} alt="HTML5" />
@@ -56,11 +65,15 @@ export default function Vinhandel() {
                     <img src={javscript} alt="JAVASCRIPT" />	
                     <img src={github} alt="GITHUB-DESKTOP" />
                 </div>
+                </Bounce>
+
             </div>
       
             </section>
         <Link to="/Capo"> 
+                <Pulse>
                 <a className="nextProject" href="">Næste projekt</a>
+                </Pulse>
             </Link>
            <Footer />
         </div>

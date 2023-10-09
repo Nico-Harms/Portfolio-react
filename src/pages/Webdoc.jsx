@@ -12,6 +12,9 @@ import { Link } from "react-router-dom";
 import '../components/ProjectDescription.css';
 import Projectstext from "../components/ProjectsText";
 import { useEffect, useState } from "react";
+import Slide from 'react-reveal/Slide'
+import Bounce from 'react-reveal/Bounce';
+import Pulse from 'react-reveal/Pulse';
 
 
 
@@ -38,8 +41,12 @@ export default function Webdoc() {
                 <h2 className="MobileHeader">Webdoc I undervisningen</h2>
             <BlobSvg profilePicture={webdoc} />
                 <div className="buttonWrapper">
+                    <Slide left>
                     <a className="projectBtn" target="_blank" href="https://webdoc-ai.harmscreativity.dk/">LIVE DEMO</a>
+                    </Slide>
+                    <Slide right>
                     <a className="projectBtn" target="_blank" href="https://github.com/Nico-Harms/Webdoc">CODE</a>
+                    </Slide>
                 </div>
             </div>
             <div className="projectDescription">
@@ -56,18 +63,24 @@ export default function Webdoc() {
                   <Projectstext key={post.id} post={post} />
                 ))}
                 <hr />
+                <Bounce bottom cascade>
                 <div className="ikonProgrammer">
+               
                     <img src={figma} alt="Figma" />
                     <img src={html} alt="HTML5" />
                     <img src={css} alt="CSS3" />
                     <img src={javscript} alt="JAVASCRIPT" />	
                     <img src={github} alt="GITHUB-DESKTOP" />
                 </div>
+                </Bounce>
+
             </div>
       
             </section>
         <Link to="/Vinhandel"> 
+        <Pulse> 
                 <a className="nextProject" href="">Næste projekt</a>
+                </Pulse>
             </Link>
            <Footer />
         </div>

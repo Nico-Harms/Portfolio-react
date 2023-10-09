@@ -1,18 +1,17 @@
 import React, { useState } from 'react';
 import capoBackground from '../assets/capo.webp';
 import webdocBackground from '../assets/webdoc.webp';
-import vinhandelBackground from '../assets/aarhusvinhandel.webp';
+import vinhandelBackground from '../assets/vinhandel.webp';
 import { Link } from 'react-router-dom';
 
 
-// Import other background images as needed.
 
 
 const backgroundImages = {
   capo: capoBackground,
   webdoc: webdocBackground,
   vinhandel: vinhandelBackground,
-  // Add other background images for different portfolio items.
+
 };
 
 
@@ -72,7 +71,7 @@ export default function HovereffectProjects() {
           className={`portfolio-item ${isPortfolioActive ? 'active' : ''}`}
           onMouseEnter={handlePortfolioHover}
           onMouseLeave={handlePortfolioHover}>
-          <img src={backgroundImages.capo} alt="" />
+          <img className='capo' src={backgroundImages.capo} alt="" />
           <div className="portfolio-mask-wrap">
             <Link to="/Capo">
               <a href="#">
@@ -93,7 +92,7 @@ export default function HovereffectProjects() {
           data-portfolio-service="digital & ecommerce"
           onMouseEnter={handlePortfolioHover}
           onMouseLeave={handlePortfolioHover}>
-          <img src={backgroundImages.webdoc} alt="" />
+          <img className='webdoc' src={backgroundImages.webdoc} alt="" />
 
           <div className="portfolio-mask-wrap">
             <Link to="/Webdoc">
@@ -115,7 +114,7 @@ export default function HovereffectProjects() {
           data-portfolio-service="digital & brand"
           onMouseEnter={handlePortfolioHover}
           onMouseLeave={handlePortfolioHover} >
-          <img src={backgroundImages.vinhandel} alt="" />
+          <img className='vinhandel' src={backgroundImages.vinhandel} alt="" />
 
           <div className="portfolio-mask-wrap">
             <Link to="/Vinhandel">
@@ -132,7 +131,7 @@ export default function HovereffectProjects() {
           </div>
         </li>
       </ul>
-      /
+      
 
 
     </div>

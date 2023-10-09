@@ -1,5 +1,5 @@
 import Navigation from "./components/Navigation";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 //import pages
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -12,7 +12,11 @@ import { useEffect, useState } from "react";
 
 export default function App() {
 
-  
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scroll to the top when the pathname changes
+  }, [pathname]);
   return (
    
      <main>

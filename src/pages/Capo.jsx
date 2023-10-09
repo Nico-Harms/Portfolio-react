@@ -1,5 +1,6 @@
 import photoshop from "../assets/photoshop.svg";
 import html from "../assets/html.svg";
+import Slide from 'react-reveal/Slide'
 import css from "../assets/css.svg";
 import github from "../assets/github.svg";
 import BlobSvg from '../components/BlobSvg.jsx';
@@ -9,6 +10,8 @@ import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import { useEffect, useState } from "react";
 import Projectstext from "../components/ProjectsText";
+import Bounce from 'react-reveal/Bounce';
+import Pulse from 'react-reveal/Pulse';
 
 
 
@@ -35,8 +38,12 @@ export default function Capo() {
             <h2 className="MobileHeader">CAPO Vin & Mad bar</h2>
             <BlobSvg profilePicture={capo} />
                 <div className="buttonWrapper">
+                    <Slide left> 
                     <a className="projectBtn" target="_blank" href="https://harmscreativity.dk/#vin-rum">LIVE DEMO</a>
+                    </Slide>
+                    <Slide right>
                     <a className="projectBtn" target="_blank" href="https://github.com/madsnbkristensen/Mobile-first-capo?fbclid=IwAR1w0bOCbxqwvpK_a5DGXL_SNVFYBWYbx1vgDs7RfG2vzREBAFUYE5zqWWM">CODE</a>
+                    </Slide>
                 </div>
             </div>
             <div className="projectDescription">
@@ -52,18 +59,22 @@ export default function Capo() {
                 ))}
     
                 <hr />
+                <Bounce bottom cascade>
                 <div className="ikonProgrammer">
                     <img src={photoshop} alt="" />
                     <img src={html} alt="" />
                     <img src={css} alt="" />
                     <img src={github} alt="" />
                 </div>
+                </Bounce>
             </div>
          
         
         </section>
         <Link to="/Webdoc"> 
+        <Pulse>
                 <a className="nextProject" href="">Næste projekt</a>
+                </Pulse>
             </Link>
            <Footer />
         </div>
