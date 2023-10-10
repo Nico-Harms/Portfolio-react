@@ -117,14 +117,14 @@ export default function Home() {
                   <p className='contactText'>Nicolai Harms</p>
                 </a>
               </div>
-              <a className='cvButton' href={CV} download >Download CV</a>
+             
 
             </div>
+            <a className='cvButton' href={CV} download >Download CV</a>
             </Fade>
           </article>
           <div className='contactMeImageWrapper'>
           <img className='contactMeImage' src={contactpicture} alt="" width="100%" height="100%" />
-
           </div>
         </section>
 
