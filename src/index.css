@@ -4,6 +4,21 @@
 
 } 
 
+.arrow-wrapper {
+  position: relative;
+}
+
+.chevronLeft {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%);
+  font-size: clamp(2rem, 1.5385rem + 2.0513vw, 4rem);
+  color: rgb(255, 255, 255);
+  z-index: 100;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
 p  {
   font-family: 'Abhaya Libre', serif;  
    }
@@ -416,6 +431,9 @@ ul {
   display: inline-block;
   /* Add this line */
 }
+.portfolio-mask {
+  white-space: nowrap;
+}
 
 .portfolio-mask span {
   display: inline-block;
@@ -463,9 +481,8 @@ ul li {
   width: 100%;
   /* Adjust as needed */
   margin: 0;
-  height: 90vh;
+  height: 110vh;
   position: relative;
-
 
 }
 
@@ -476,10 +493,11 @@ ul li {
 
 .portfolio-picture {
   position: absolute;
-  object-fit: contain;
+  object-fit: cover;
   left: 0;
   top: 0;
   width: 100%;
+  height: 100%;
   padding: 0;
   margin: 0;
   opacity: 0;
@@ -488,7 +506,9 @@ ul li {
 
   .capo.show,
   .webdoc.show,
-  .vinhandel.show {
+  .vinhandel.show,
+  .lendr.show,
+  .jumbo.show {
     opacity: 0.7;
     transition: opacity 0.2s ease-in-out .2s;
   }
@@ -499,6 +519,7 @@ ul li {
   height: 200px;
   font-size: clamp(4rem, 3.3077rem + 3.0769vw, 7rem);
   position: relative;
+  top: 40px;
 }
 .portfolio-item img {
   display: none;
@@ -529,6 +550,7 @@ ul li {
 
 .portfolio-wrapper .fake-link:before {
   content: attr(data-mask-link)
+
 }
 
 
@@ -934,12 +956,14 @@ ul li {
   }
   .capo ,
   .webdoc, 
-  .vinhandel {
+  .vinhandel,
+  .lendr,
+  .jumbo {
     filter: blur(2px); 
   }
 
 
-  .vinhandel {
+  .vinhandel, .jumbo, .lendr  {
     filter: brightness(0.8) blur(2px);  
   }
   

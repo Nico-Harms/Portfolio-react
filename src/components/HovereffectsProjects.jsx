@@ -3,6 +3,11 @@ import capoBackground from '../assets/capo.webp';
 import webdocBackground from '../assets/webdoc.webp';
 import vinhandelBackground from '../assets/vinhandel.webp';
 import { Link } from 'react-router-dom';
+import jumboBackground from '../assets/jumbo-portfolio.webp';
+import lendrBackground from '../assets/lendr-portfolio.webp';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
+
 
 
 
@@ -11,6 +16,8 @@ const backgroundImages = {
   capo: capoBackground,
   webdoc: webdocBackground,
   vinhandel: vinhandelBackground,
+  jumbo: jumboBackground,
+  lendr: lendrBackground
 
 };
 
@@ -23,7 +30,7 @@ export default function HovereffectProjects() {
     const portfolioItems = document.querySelectorAll('.portfolio-item');
     const portfolioWrapper = document.querySelector('.portfolio-wrapper');
     const portfolioList = document.querySelector('.portfolio'); // Define portfolioList here
-    const portfolioPicture = document.getElementById(portfolioItem.id.split("-")[0]+"-image"); 
+    const portfolioPicture = document.getElementById(portfolioItem.id.split("-")[0] + "-image");
     const hasActivePortfolio = Array.from(portfolioItems).some((item) =>
       item.classList.contains('active')
     );
@@ -58,6 +65,8 @@ export default function HovereffectProjects() {
       <img id='capo-image' className='portfolio-picture capo' src={backgroundImages.capo} alt="" />
       <img id='webdoc-image' className='portfolio-picture webdoc' src={backgroundImages.webdoc} alt="" />
       <img id='vinhandel-image' className='portfolio-picture vinhandel' src={backgroundImages.vinhandel} alt="" />
+      <img id='jumbo-image' className='portfolio-picture jumbo' src={backgroundImages.jumbo} alt="" />
+      <img id='lendr-image' className='portfolio-picture lendr' src={backgroundImages.lendr} alt="" />
 
 
       <ul className="portfolio">
@@ -75,14 +84,22 @@ export default function HovereffectProjects() {
           <div className="portfolio-mask-wrap">
             <Link to="/Capo">
               <a href="#">
-                <div className="portfolio-mask"><span>capo</span> 
+
+                <div className='arrow-wrapper'>
+                  <div className="portfolio-mask"><span>capo</span>
+
+
+                  </div>
                 </div>
+
                 <span
                   className="fake-link"
-                  data-mask-link="capo" 
+                  data-mask-link="capo"
                   onMouseEnter={handleTextHover}
-                  onMouseLeave={handleTextHoverEnd}
-                ></span>
+                  onMouseLeave={handleTextHoverEnd}>
+
+                </span>
+
               </a>
             </Link>
           </div>
@@ -130,8 +147,49 @@ export default function HovereffectProjects() {
             </Link>
           </div>
         </li>
+
+        <li id='lendr-hover'
+          className={`portfolio-item ${isPortfolioActive ? 'active' : ''}`}
+          onMouseEnter={handlePortfolioHover}
+          onMouseLeave={handlePortfolioHover}>
+          <img className='lendr' src={backgroundImages.lendr} alt="" />
+          <div className="portfolio-mask-wrap">
+            <Link to="/Lendr">
+              <a href="#">
+                <div className="portfolio-mask"><span>lendr</span></div>
+                <span
+                  className="fake-link"
+                  data-mask-link="lendr"
+                  onMouseEnter={handleTextHover}
+                  onMouseLeave={handleTextHoverEnd}
+                ></span>
+              </a>
+            </Link>
+          </div>
+        </li>
+
+        <li id='jumbo-hover'
+          className={`portfolio-item ${isPortfolioActive ? 'active' : ''}`}
+          onMouseEnter={handlePortfolioHover}
+          onMouseLeave={handlePortfolioHover}>
+          <img className='jumbo' src={backgroundImages.jumbo} alt="" />
+          <div className="portfolio-mask-wrap">
+            <Link to="/jumbo">
+              <a href="#">
+                <div className="portfolio-mask"><span>jumbo</span></div>
+                <span
+                  className="fake-link"
+                  data-mask-link="jumbo"
+                  onMouseEnter={handleTextHover}
+                  onMouseLeave={handleTextHoverEnd}
+                ></span>
+              </a>
+            </Link>
+          </div>
+        </li>
+
       </ul>
-      
+
 
 
     </div>

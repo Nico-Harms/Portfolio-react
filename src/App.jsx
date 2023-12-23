@@ -9,6 +9,8 @@ import Capo from "./pages/Capo";
 import Webdoc from "./pages/Webdoc";
 import Vinhandel from "./pages/Vinhandel";
 import { useEffect, useState } from "react";
+import Jumbobakery from "./pages/Jumbobakery";
+import Lendr from "./pages/Lendr";
 
 export default function App() {
 
@@ -18,9 +20,9 @@ export default function App() {
     window.scrollTo(0, 0); // Scroll to the top when the pathname changes
   }, [pathname]);
   return (
-   
-     <main>
-     
+
+    <main>
+
       <Navigation />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -30,11 +32,14 @@ export default function App() {
         <Route path="/capo" element={<Capo />} />
         <Route path="/webdoc" element={<Webdoc />} />
         <Route path="/vinhandel" element={<Vinhandel />} />
+        <Route path="/jumbo" element={<Jumbobakery />} />
+        <Route path="lendr" element={<Lendr />} />
+
 
       </Routes>
-     
-      </main>
-    
-      
+
+    </main>
+
+
   );
 }
