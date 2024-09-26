@@ -2,11 +2,12 @@ import React from 'react';
 import Fade from 'react-reveal/Fade';
 import HovereffectProjects from '../components/HovereffectsProjects.jsx';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHtml5, faSquareJs, faReact, faCss3Alt, faGithub, faLinkedin, faWordpress} from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons'
+import { faHtml5, faSquareJs, faReact, faCss3Alt, faGithub, faLinkedin, faWordpress, faPhp} from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope, faPhone, faDatabase } from '@fortawesome/free-solid-svg-icons'
 import aboutMePicture from '../assets/aboutmepicture.png';
 import contactpicture from '../assets/contactmepicture.webp';
 import profilePicture from '../assets/profilepicture.png';
+
 import BlobSvg from '../components/BlobSvg.jsx';
 import Footer from '../components/Footer.jsx';
  import ChangingText from '../components/ChangingText.jsx';
@@ -52,6 +53,9 @@ export default function Home() {
               <FontAwesomeIcon className='techStackIcon' color="#2965f1" icon={faCss3Alt} />
               <FontAwesomeIcon className='techStackIcon' color="#f0db4f" icon={faSquareJs} />
               <FontAwesomeIcon className='techStackIcon' color="#61DBFB" icon={faReact} />
+              <FontAwesomeIcon className='techStackIcon' color="" icon={faPhp} />
+              <FontAwesomeIcon className='techStackIcon' color="" icon={faDatabase} />
+
               <FontAwesomeIcon className='techStackIcon' color="#21759b" icon={faWordpress} />
               
             </div>

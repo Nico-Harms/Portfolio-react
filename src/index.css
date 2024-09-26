@@ -211,7 +211,7 @@ body {
 
 .techStack {
   font-size: clamp(2rem, -0.0488rem + 2.4390vw, 3rem);
-  padding: 15px;
+  padding: 0 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -227,13 +227,16 @@ body {
 }
 
 .techIconWrapper {
+  width: 100%;
   display: flex;
-  gap: clamp(1rem, 2.523rem + 3.5897vw, 7.5rem);
+  justify-content: space-evenly;
+  gap: 50px;
+  flex-wrap: wrap;
 }
 
 
 .techStackIcon {
-  font-size: clamp(1rem, 2.5rem + 1.9512vw, 4.5rem);
+  height: 50px;
   transition: transform 0.3s ease;
 }
 
@@ -373,8 +376,8 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 20% 40%;
-  height: 70vh;
   width: auto;
+  padding: 60px 0;
 
 }
 .aboutMeWrapper h3 {
@@ -456,7 +459,6 @@ ul li {
   display: none;
 }
 
-
 /* Override display for active images */
 .projectPicture.entered {
   display: block;
@@ -481,7 +483,7 @@ ul li {
   width: 100%;
   /* Adjust as needed */
   margin: 0;
-  height: 110vh;
+  height: fit-content;
   position: relative;
 
 }
@@ -489,6 +491,10 @@ ul li {
 .label-mask-wrap h6 {
   font-size: 2rem;
 
+}
+
+.portfolio {
+  padding: 80px 0;
 }
 
 .portfolio-picture {
@@ -884,7 +890,6 @@ ul li {
     display: flex;
     width: 100%;
     justify-content: space-evenly;
-    gap: 0;
   }
 
   .iconWrapper {
