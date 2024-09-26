@@ -93,13 +93,11 @@ export default function Home() {
         <section id='contactMe' className='contactMeWrapper'>
 
           <article className='contactMeText'>
-          <Fade left cascade>
             <h2 className='contactMeDesktop'>Kontakt mig</h2>
             <p className='contactMeBreadText'>
               I skal hyre mig fordi jeg arbejder godt sammen i teams, jeg er målrettet ambitøs også er jeg lige den i mangler.
               Hvis i ellers har nogle spørgsmål, eller ønsker at arbejde sammen med mig, så tøv ikke med at kontakte mig.
             </p>
-            </Fade>
             <Fade top cascade>
             <div className='iconWrapper'>
               <div className='contactMeBoxes'>

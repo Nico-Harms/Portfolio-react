@@ -230,7 +230,7 @@ body {
   width: 100%;
   display: flex;
   justify-content: space-evenly;
-  gap: 50px;
+  gap: 20px;
   flex-wrap: wrap;
 }
 
@@ -309,11 +309,10 @@ body {
 }
 
 .soMe {
-  position: absolute;
+  /* position: absolute;
   top: 100%;
-  /* Position below the h3 element */
   left: 5%;
-  /* Align with the start of the h3 element */
+  */
   width: 100%;
   display: flex;
   gap: 30px;
@@ -363,7 +362,13 @@ body {
 
 /* About Me styles */
 
+/*===============================================
+=          Randomtextwrapper           =
+===============================================*/
 
+.randomTextWrapper {
+  margin: 60px 0;
+}
 
 
 
@@ -886,11 +891,7 @@ ul li {
     padding: 0;
   }
 
-  .techIconWrapper {
-    display: flex;
-    width: 100%;
-    justify-content: space-evenly;
-  }
+
 
   .iconWrapper {
     width: 50%;
