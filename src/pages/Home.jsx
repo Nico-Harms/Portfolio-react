@@ -6,7 +6,7 @@ import { faHtml5, faSquareJs, faReact, faCss3Alt, faGithub, faLinkedin, faWordpr
 import { faEnvelope, faPhone, faDatabase } from '@fortawesome/free-solid-svg-icons'
 import aboutMePicture from '../assets/aboutmepicture.png';
 import contactpicture from '../assets/contactmepicture.webp';
-import profilePicture from '../assets/profilepicture.png';
+import profilePicture from '../assets/profilepicture.webp';
 
 import BlobSvg from '../components/BlobSvg.jsx';
 import Footer from '../components/Footer.jsx';
